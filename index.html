@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlipMate</title>
+    <link rel="shortcut icon" href="/assets/Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/statusbar.css" />
+    <link rel="stylesheet" href="css/gameState.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="statusBar">
+      <div class="timerContainer">
+        <div class="icon" id="controlButton">
+          <div class="pause" id="pause">
+            <i class="fa-solid fa-pause fa-2xl" style="color: #00ffff"></i>
+          </div>
+          <div class="resume" id="resume">
+            <i class="fa-solid fa-play fa-xl" style="color: #00ffff"></i>
+          </div>
+        </div>
+        <div class="timer" id="timeLeft">02:00</div>
+      </div>
+      <div class="correctMatchContainer">
+        <div class="icon">
+          <i class="fa-solid fa-circle-check fa-xl" style="color: #00f95f"></i>
+        </div>
+        <div class="correctMatch" id="correctPair">00</div>
+      </div>
+      <div class="wrongMatchContainer">
+        <div class="icon">
+          <i class="fa-solid fa-circle-xmark fa-xl" style="color: #f80000"></i>
+        </div>
+        <div class="wrongMatch" id="wrongPair">00</div>
+      </div>
+    </div>
+    <div class="innerContainer">
+      <div class="cardContainer" id="cardContainer"></div>
+    </div>
+    <div class="gameStateControl" id="gameStateControl">
+      <div class="timeOutMessage">
+        <img src="assets/hourGlass.png" alt="haourGlass" id="hourGlassImg" />
+        <img src="assets/trophy.png" alt="winnerTrophy" id="trophy" />
+        <div class="gameStateMessage" id="timeOutMessage"></div>
+        <div class="gameControlButton" id="gameControlButton"></div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="src/main.js"></script>
+</html>
