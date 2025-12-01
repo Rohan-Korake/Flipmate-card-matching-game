@@ -1,0 +1,98 @@
+.statusBar {
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  border: 0.06rem solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.7rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.gamePlayIcon {
+  display: none;
+}
+
+.outerContianer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.timerContainer,
+.correctMatchContainer,
+.wrongMatchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.icon {
+  margin: 0.5rem;
+}
+
+.timer {
+  min-width: 5ch;
+}
+
+.correctMatch,
+.wrongMatch {
+  min-width: 2ch;
+}
+
+.timer,
+.correctMatch,
+.wrongMatch {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 734px) {
+  .statusBar {
+    padding: 0.5rem;
+  }
+
+  .timerContainer,
+  .correctMatchContainer,
+  .wrongMatchContainer {
+    flex-direction: column;
+  }
+
+  .timer,
+  .correctMatch,
+  .wrongMatch {
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    margin: 0.5rem;
+  }
+}
+
+.resume {
+  cursor: pointer;
+  display: none;
+  width: 2ch;
+}
+
+.pause {
+  cursor: pointer;
+  display: block;
+  width: 2ch;
+}
