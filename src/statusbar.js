@@ -1,6 +1,6 @@
 import { gameControl } from "./gameControl.js";
 let countdown;
-let time = 120;
+let time = 119;
 const cardContainer = document.getElementById("cardContainer");
 
 export function stopTimer() {
@@ -36,12 +36,14 @@ const playButton = document.getElementById("resume");
 //pause timer
 pauseButton.addEventListener("click", function () {
   clearInterval(countdown);
+  cardContainer.style.animation = "hiddenAnimation 1 0.2s ease";
   cardContainer.style.opacity = 0;
 });
 
 //resume timer
 playButton.addEventListener("click", function () {
   gameTimer();
+  cardContainer.style.animation = "showAnimation 1 0.2s ease";
   cardContainer.style.opacity = 1;
 });
 

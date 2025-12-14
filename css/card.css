@@ -36,12 +36,18 @@
 }
 
 .front {
-  background: #e0e7ffd7;
+  transition: background 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.21);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: aliceblue;
   transform: rotateY(0deg);
+}
+
+.front:hover {
+  background: rgba(255, 255, 255, 0.31);
 }
 
 .back {
@@ -88,4 +94,22 @@ h3 {
 
 .card.flipped {
   transform: rotateY(180deg);
+}
+
+@keyframes hiddenAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes showAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
